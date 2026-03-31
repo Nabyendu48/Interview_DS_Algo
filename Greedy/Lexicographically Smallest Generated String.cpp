@@ -30,8 +30,8 @@ public:
 
         int N = n + m - 1;
         string word(N, '$');
-
-        vector<bool> canChange(N, false);
+        
+    
 
         //Process the 'T'
         for(int i = 0; i < n; i++) {
@@ -53,7 +53,7 @@ public:
         for(int i = 0; i < N; i++) {
             if(word[i] == '$') {
                 word[i] = 'a';
-                canChange[i] = true;
+                
             }
         }
 
@@ -67,7 +67,7 @@ public:
                     
                     bool changed = false;
                     for(int k = i + m - 1; k >= i; k--) {
-                        if(canChange[k] == true) {
+                        if(word[k] =='a') {
                             word[k] = 'b';
                             changed = true;
                             break;
